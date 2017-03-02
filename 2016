@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"b127b10ce1","applicationID":"517132","transactionName":"elkNFktcVQ8BFxhVF1hYFwddbEsGFRBSQRFKGQoMXVZB","queueTime":0,"applicationTime":2755,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<title>INET Online</title>
+<link href="/javascripts/lib/jqplot/jquery.jqplot.css" media="all" rel="stylesheet" type="text/css" />
+<link href="/javascripts/lib/flowplayer-5/skin/playful.css" media="all" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/lib/defaultTheme.css" media="all" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/lib/jquery.reject.css" media="all" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/compiled/theme/default/style.css" media="all" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/compiled/theme/reporting/style.css" media="all" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/compiled/theme/default/funnel.css" media="all" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/compiled/theme/default/printable_visualizations.css" media="all" rel="stylesheet" type="text/css" />
+<style>
+  /*<![CDATA[*/
+    header, footer {visibility: hidden;}
+  /*]]>*/
+</style>
+<style>
+  /*<![CDATA[*/
+    body, div.description, dt, dd, h1, h2, h3, div, span, p, ul, li, ol {
+      font-family: "Georgia", Helvetica, "Times New Roman", Times, serif !important;
+      color: #000000;
+    
+    }
+    header, footer {visibility: hidden;}
+  /*]]>*/
+</style>
+
+<style>
+  /*<![CDATA[*/
+    body, div.description, dt, dd, div, span, p {
+      font-size: 13px !important;
+    }
+    h3 {
+      font-size: 15px !important;
+    }
+    h2 {
+        font-size: 17px !important;
+      }
+    h1 {
+      font-size: 19px !important;
+    }
+  /*]]>*/
+</style>
+
+<style>
+  /*<![CDATA[*/
+    .letter {
+      margin-top: .7in;
+    }
+  /*]]>*/
+</style>
+
+<style>
+  /*<![CDATA[*/
+    .letter {
+      margin-right: .1in;
+    }
+  /*]]>*/
+</style>
+
+<style>
+  /*<![CDATA[*/
+    .letter {
+      margin-bottom: .7in;
+    }
+  /*]]>*/
+</style>
+
+<style>
+  /*<![CDATA[*/
+    .letter {
+      margin-left: .6in;
+    }
+  /*]]>*/
+</style>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=&amp;sensor=false" type="text/javascript"></script>
+<script src="/javascripts/lib/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="/javascripts/lib/jquery-ui.min.js" type="text/javascript"></script>
+<script src="/javascripts/lib/jquery.alerts.js" type="text/javascript"></script>
+<script src="/javascripts/lib/jquery.cookie.js" type="text/javascript"></script>
+<script src="/javascripts/lib/jquery.formatCurrency-1.4.0.pack.js" type="text/javascript"></script>
+<script src="/javascripts/lib/jquery.inputmask.bundle.js" type="text/javascript"></script>
+<script src="/javascripts/lib/jquery.jeditable.js" type="text/javascript"></script>
+<script src="/javascripts/lib/jquery.jqplot.min.js" type="text/javascript"></script>
+<script src="/javascripts/lib/jquery.json-2.2.min.js" type="text/javascript"></script>
+<script src="/javascripts/lib/jquery.mousewheel.js" type="text/javascript"></script>
+<script src="/javascripts/lib/jquery.multiselect.js" type="text/javascript"></script>
+<script src="/javascripts/lib/jquery.raty.min.js" type="text/javascript"></script>
+<script src="/javascripts/lib/jquery.reject.js" type="text/javascript"></script>
+<script src="/javascripts/lib/jquery.shortkeys.js" type="text/javascript"></script>
+<script src="/javascripts/lib/jquery.simplemodal.1.4.4.min.js" type="text/javascript"></script>
+<script src="/javascripts/lib/jquery.timeago.js" type="text/javascript"></script>
+<script src="/javascripts/lib/jquery.validate.pack.js" type="text/javascript"></script>
+<script src="/javascripts/lib/a-rangy-core.js" type="text/javascript"></script>
+<script src="/javascripts/lib/ejs_fulljslint.js" type="text/javascript"></script>
+<script src="/javascripts/lib/flowplayer.js" type="text/javascript"></script>
+<script src="/javascripts/lib/fluxx.map.js" type="text/javascript"></script>
+<script src="/javascripts/lib/geostats.js" type="text/javascript"></script>
+<script src="/javascripts/lib/jenks.util.js" type="text/javascript"></script>
+<script src="/javascripts/lib/jqplot.barRenderer.js" type="text/javascript"></script>
+<script src="/javascripts/lib/jqplot.canvasAxisTickRenderer.min.js" type="text/javascript"></script>
+<script src="/javascripts/lib/jqplot.canvasTextRenderer.min.js" type="text/javascript"></script>
+<script src="/javascripts/lib/jqplot.categoryAxisRenderer.min.js" type="text/javascript"></script>
+<script src="/javascripts/lib/markerclusterer_compiled.js" type="text/javascript"></script>
+<script src="/javascripts/lib/oms.min.js" type="text/javascript"></script>
+<script src="/javascripts/lib/plupload.js" type="text/javascript"></script>
+<script src="/javascripts/lib/rails.js" type="text/javascript"></script>
+<script src="/javascripts/lib/rangy-classapplier.js" type="text/javascript"></script>
+<script src="/javascripts/lib/realme.js" type="text/javascript"></script>
+<script src="/javascripts/lib/redactor.min.js" type="text/javascript"></script>
+<script src="/javascripts/lib/underscore-min.js" type="text/javascript"></script>
+<script src="/javascripts/lib/underscore-string.min.js" type="text/javascript"></script>
+<script src="/javascripts/lib/undo.js" type="text/javascript"></script>
+<script src="/javascripts/lib/z-medium.min.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.adhoc-questions.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.admin-changelog.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.admin.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.advanced-filter.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.alerts.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.anaytics.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.backgroundJobs.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.bridger.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.browser-warnings.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.card.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.carousel.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.core.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.dashboard.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.dock.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.fixedheadertable.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.initializer.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.inline-edit.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.input_mask.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.magic-textarea.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.mhs.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.modalCard.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.pagination.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.payment-generator.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.poller.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.popoutcard.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.report-builder.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.report-generator.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.rich_text.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.rte.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.select_transfer.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.setuser.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.sharedcards.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.stage.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.stencil.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.storage.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.table.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.tree-selector.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.uploader.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.user-tools.js" type="text/javascript"></script>
+<script src="/javascripts/fluxx.visualizations.js" type="text/javascript"></script>
+<script src="/javascripts/reporting/d3.min.js" type="text/javascript"></script>
+<script src="/javascripts/reporting/nv.d3.js" type="text/javascript"></script>
+<script src="/javascripts/reporting/fluxx.viz.js" type="text/javascript"></script>
+<meta content='.7in' name='pdfkit-margin_top'>
+<meta content='.1in' name='pdfkit-margin_right'>
+<meta content='.7in' name='pdfkit-margin_bottom'>
+<meta content='.6in' name='pdfkit-margin_left'>
+<meta content='1000' name='pdfkit-javascript-delay'>
+</head>
+<body id='fluxx'>
+<style>
+  /*<![CDATA[*/
+    .knight-info {
+        font-family: Calibri, Helvetica, "Times New Roman", Times, serif !important;
+        font-size: 20px !important;
+    
+      }
+  /*]]>*/
+</style>
+<div id='card-table'>
+<div id='hand'>
+<li class='card map-card'>
+<div class='map map-view' data-view='map' id='granted_requests_map_view'>
+<div class='panels'>
+<script>
+  //<![CDATA[
+    $(document).ready(function() {
+    
+      var chart_type = 'bar',
+          model_type = 'GrantRequest',
+          amount_type = 'currency',
+          title = 'Grants 2016',
+          $card = $('.card').empty();
+    
+      // AML TODO: Calculate settings
+      var settings = {};
+    
+      settings[chart_type] = [
+        {name: "group_col", value: 'program_id'},
+        {name: "value_col", value: 'amount_recommended'},
+        {name: "op", value: 'sum'}
+      ];
+    
+      $card.fluxxViz({modelType: model_type, chart_type: chart_type , amount_type: amount_type, settings: settings}).data('fluxxViz');
+      $card.prepend('<h1 class="title">' + title + '</h1>');
+    
+    })
+  //]]>
+</script>
+
+
+</div>
+</div>
+</li>
+</div>
+</div>
+</body>
+</html>
+<script>
+  //<![CDATA[
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-49265200-1', 'fluxx.io');
+    ga('send', 'pageview');
+    
+    $.extend(true, {
+      fluxx: {
+        config: {
+          date_format: 'mm/dd/yy',
+          currency_format: $.parseJSON('{"format":"%u%n","unit":"$","separator":".","delimiter":",","precision":2,"significant":false,"strip_insignificant_zeros":false}'),
+          datepicker_unique_id: 1,
+          
+          icon_path: '/fluxx_engine/theme/default/images/icons',
+          can_add_dashboard_templates: true,
+          can_manage_dashboard: true,
+          current_user_id: '353280',
+          google_docs_enabled: false,
+          enable_notifications: true,
+          enable_card_sharing: true,
+          card_views: ['spreadsheet', 'summary', 'map', 'funnel', 'vis', 'fluxxreport_id', 'listing'],
+          enable_spell_checker: true,
+          program_org_id: '95336',
+          draft_state: 'draft',
+          
+        }
+      }
+    });
+    
+    $(document).ready(function() {
+      $('.map_canvas2').each(function() {
+        var $elem = $(this);
+        var $card = $('.card');
+        var grants = $elem.data('grants');
+        var canvas = $('.gmap_fusion')[0];
+        var title = 'Grants 2016';
+        // delay here to avoid dom loading issues with fluxx
+        setTimeout(function() {
+          genMap(canvas, grants, $card);
+          $card.prepend('<h1 class="title">' + title + '</h1>');
+        }, 500);
+      });
+    });
+  //]]>
+</script>
+
